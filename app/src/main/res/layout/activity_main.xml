@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/splash_background">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_centerInParent="true">
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Munchiez"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-light"
+        android:textSize="40sp"/>
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/logo"
+        android:background="@drawable/utensils_icon"
+        android:backgroundTint="@color/white"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

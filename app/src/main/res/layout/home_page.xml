@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parent">
+
+ <!--this is start of bottom menu-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/home_box"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp">
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/home_icon"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:text="home"
+                android:layout_marginTop="27dp"
+                android:layout_marginLeft="3dp"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/favorites_box"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_toRightOf="@id/home_box">
+
+            <ImageView
+                android:id="@+id/favorites"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/heart_icon"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:text="Favorites"
+                android:layout_marginTop="27dp"
+                android:textSize="12sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/cart_box"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_toRightOf="@id/favorites_box">
+
+            <ImageView
+                android:id="@+id/cart"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/cart_icon"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:text="home"
+                android:layout_marginTop="27dp"
+                android:layout_marginLeft="6dp"
+                android:textSize="12sp"/>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/options_box"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_toRightOf="@id/cart_box">
+
+            <ImageView
+                android:id="@+id/options"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/options_icon"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:text="home"
+                android:layout_marginTop="27dp"
+                android:layout_marginLeft="3dp"
+                android:textSize="12sp"/>
+
+        </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+<!--This is the end of the bottom menu-->
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="195dp"
+        android:background="@drawable/hero_image"/>
+
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:hint="    Search Recipes"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/search_shape"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+</RelativeLayout>
