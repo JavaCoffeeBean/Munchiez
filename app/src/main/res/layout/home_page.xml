@@ -139,9 +139,20 @@
 
 
     <ImageView
+        android:id="@+id/home_image"
         android:layout_width="match_parent"
         android:layout_height="210dp"
         android:background="@drawable/hero_image"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="470dp"
+            android:layout_alignTop="@id/home_image"
+            android:layout_marginTop="210dp"
+            android:padding="25dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
 
 
     </RelativeLayout>
