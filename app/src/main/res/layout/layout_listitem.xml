@@ -6,23 +6,26 @@
     android:id="@+id/parent_layout1">
 
     <ImageView
-        android:id="@+id/test_image"
+        android:id="@+id/recipe_image"
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:src="@drawable/sushi"/>
 
     <TextView
+        android:id="@+id/recipe_name"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:text="Sushi"
-        android:layout_toRightOf="@id/test_image"
+        android:layout_toRightOf="@id/recipe_image"
         android:textSize="30sp"
+        android:textColor="@color/black"
         android:layout_marginLeft="10dp"/>
 
     <ImageButton
+        android:id="@+id/favorite_button"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_alignBottom="@id/test_image"
+        android:layout_alignBottom="@id/recipe_image"
         android:background="@drawable/heart_icon"
         android:layout_marginLeft="315dp"
         android:backgroundTint="@color/grey"/>
@@ -32,7 +35,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/cart_icon"
-        android:layout_toRightOf="@id/test_image"
+        android:layout_toRightOf="@id/recipe_image"
         android:layout_marginLeft="200dp"
         android:layout_marginRight="10dp"
         android:backgroundTint="@color/grey"/>
