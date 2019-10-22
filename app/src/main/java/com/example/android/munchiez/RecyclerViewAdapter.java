@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,6 +25,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private ArrayList<String> mImageNames = new ArrayList<>();
     private ArrayList<String> mImages = new ArrayList<>();
     private Context mContext;
+
+    public RecyclerViewAdapter(Context context. ArrayList<String> imageNames, ArrayList<String> images) {
+        mImageNames = imageNames;
+    }
 
 
 
@@ -49,6 +54,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             @Override
             public void onClick(View view) {
                 Log.d(TAG, "onClick: clicked on: " + mImageNames.get(position));
+
+                Toast.makeText(mContext, mImageNames.get(position), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -56,7 +63,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mImageNames.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
