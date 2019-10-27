@@ -22,12 +22,20 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private static final String TAG = "RecyclerViewAdapter";
 
+
     private ArrayList<String> mImageNames = new ArrayList<>();
     private ArrayList<String> mImages = new ArrayList<>();
+    private ArrayList<ImageButton> mfavoriteButton = new ArrayList<>();
+    private ArrayList<ImageButton> mcartButton = new ArrayList<>();
     private Context mContext;
 
-    public RecyclerViewAdapter(Context context. ArrayList<String> imageNames, ArrayList<String> images) {
+    public RecyclerViewAdapter(Context context, ArrayList<String> imageNames, ArrayList<String> images, ArrayList<ImageButton> favoriteButtons, ArrayList<ImageButton> cartButtons) {
+        mImages = images;
         mImageNames = imageNames;
+        mfavoriteButton = favoriteButtons;
+        mcartButton = cartButtons;
+        mContext = context;
+
     }
 
 
