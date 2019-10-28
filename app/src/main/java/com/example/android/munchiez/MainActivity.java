@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: started.");
 
         initImageBitmaps();
+
     }
 
     private void initImageBitmaps(){
