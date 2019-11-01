@@ -1,12 +1,17 @@
 package com.example.android.munchiez;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.ImageButton;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
@@ -28,13 +33,47 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home_page);
+        setContentView(R.layout.all_fragments);
+
+        BottomNavigationView bottomnav = findViewById(R.id.bottom_navigation);
+        bottomnav.setOnNavigationItemSelectedListener(navlistener);
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                new HomeFragment()).commit();
 
         Log.d(TAG, "onCreate: started.");
 
         initImageBitmaps();
 
     }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener navlistener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                    Fragment selectedFragment = null;
+
+                    switch (menuItem.getItemId()) {
+                        case R.id.nav_home:
+                            selectedFragment = new HomeFragment();
+                            break;
+                        case R.id.nav_favorites:
+                            selectedFragment = new FavoriteFragment();
+                            break;
+                        case R.id.nav_cart:
+                            selectedFragment = new CartFragment();
+                            break;
+                        case R.id.nav_options:
+                            selectedFragment = new OptionsFragment();
+                            break;
+                    }
+
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                            selectedFragment).commit();
+
+                    return true;
+                }
+            };
 
     private void initImageBitmaps(){
         Log.d(TAG, "initImageBitmaps: preparing bitmaps");
@@ -66,6 +105,14 @@ public class MainActivity extends AppCompatActivity {
         mImageUrls.add("http://blog.williams-sonoma.com/wp-content/uploads/2018/03/bouchon-bakery-macarons-smaller-800px.jpg");
         mNames.add("Macarons");
 
+
+    }
+    
+    protected void onStart(){
+        super.onStart();
+
+        Log.d(TAG, "onStart: this method started");
+
         initRecyclerView();
 
     }
@@ -77,4 +124,8 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
+
+
+
+
 }
