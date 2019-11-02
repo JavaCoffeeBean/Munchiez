@@ -7,4 +7,6 @@
     <color name="grey">#8F8F8F</color>
     <color name="black">#000000</color>
     <color name="grey_light">#BDBDBD</color>
+    <color name="pink">#FF6262</color>
+    <color name="transparent">#00FF6274</color>
 </resources>

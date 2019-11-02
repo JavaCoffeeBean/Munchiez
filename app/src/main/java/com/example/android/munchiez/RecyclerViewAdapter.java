@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -24,10 +25,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private ArrayList<String> mImageNames = new ArrayList<>();
     private ArrayList<String> mImages = new ArrayList<>();
     private ArrayList<ImageButton> mfavoriteButton = new ArrayList<>();
-    private ArrayList<ImageButton> mcartButton = new ArrayList<>();
+    private ArrayList<Button> mcartButton = new ArrayList<>();
     private Context mContext;
 
-    public RecyclerViewAdapter(Context context, ArrayList<String> imageNames, ArrayList<String> images, ArrayList<ImageButton> favoriteButtons, ArrayList<ImageButton> cartButtons) {
+    public RecyclerViewAdapter(Context context, ArrayList<String> imageNames, ArrayList<String> images, ArrayList<ImageButton> favoriteButtons, ArrayList<Button> cartButtons) {
         mImages = images;
         mImageNames = imageNames;
         mfavoriteButton = favoriteButtons;
@@ -77,7 +78,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         RelativeLayout parentLayout;
         TextView recipeName;
         ImageButton favoriteButton;
-        ImageButton cartButton;
+        Button cartButton;
         ImageView recipeImage;
 
 

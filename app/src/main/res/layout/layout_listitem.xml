@@ -4,7 +4,8 @@
     android:background="@drawable/recyclerview_shape"
     android:id="@+id/parent_layout1"
     android:layout_marginBottom="30dp"
-    android:layout_centerHorizontal="true">
+    android:layout_centerHorizontal="true"
+    android:backgroundTint="@color/white">
 
     <ImageView
         android:id="@+id/recipe_image"
@@ -28,20 +29,27 @@
         android:layout_marginBottom="10dp"
         android:id="@+id/favorite_button"
         android:layout_width="30dp"
+        android:layout_marginLeft="70dp"
         android:layout_height="30dp"
         android:layout_alignBottom="@id/recipe_image"
         android:background="@drawable/heart_icon"
-        android:layout_toEndOf="@id/recipe_name"
-        android:backgroundTint="@color/grey"/>
+        android:layout_toEndOf="@id/recipe_image"
+        android:backgroundTint="@color/pink"/>
 
-    <ImageButton
-        android:layout_marginTop="10dp"
+    <Button
         android:id="@+id/cart_button"
-        android:layout_width="30dp"
+        android:layout_width="90dp"
         android:layout_height="30dp"
-        android:background="@drawable/cart_icon"
-        android:layout_toRightOf="@id/recipe_name"
-        android:backgroundTint="@color/grey"/>
+        android:text="Add to Cart"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="10dp"
+        android:padding="2dp"
+        android:background="@drawable/recyclerview_shape"
+        android:layout_toRightOf="@id/favorite_button"
+        android:backgroundTint="@color/colorPrimary"/>
 
     <RelativeLayout
         android:layout_marginRight="20dp"
